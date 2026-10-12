@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="referrer" content="no-referrer">
+  <meta name="description" content="Dataset overview of Real2mix and VoxBlink2-AVSE: real jointly recorded mixtures and curated audio-lip training pairs.">
+  <title>Real2mix &amp; VoxBlink2-AVSE · Dataset overview</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main" data-en="Skip to content" data-zh="跳转到正文">Skip to content</a>
+  <header class="header">
+    <a class="brand" href="#" aria-label="Dataset overview home"><span class="brand-mark" aria-hidden="true">◫</span> AV DATASETS</a>
+    <nav aria-label="Main navigation">
+      <a href="#datasets" data-en="Datasets" data-zh="数据集">Datasets</a>
+      <a href="#protocol" data-en="Protocol" data-zh="采集与评测">Protocol</a>
+      <a href="#formats" data-en="Formats" data-zh="数据格式">Formats</a>
+      <a href="#access" data-en="Access" data-zh="访问说明">Access</a>
+    </nav>
+    <button id="language" type="button" aria-label="Switch to Chinese">中文</button>
+  </header>
+  <main id="main">
+    <section class="hero container">
+      <div class="hero-copy">
+        <p class="eyebrow" data-en="AUDIO-VISUAL TARGET SPEAKER EXTRACTION" data-zh="音视频目标说话人提取">AUDIO-VISUAL TARGET SPEAKER EXTRACTION</p>
+        <h1><span data-en="Real mixtures." data-zh="真实混讲。">Real mixtures.</span><br><span class="accent" data-en="Paired visual targets." data-zh="成对视觉目标。">Paired visual targets.</span></h1>
+        <p class="intro" data-en="Explore two complementary resources: Real2mix for evaluating jointly recorded speech, and VoxBlink2-AVSE for training with curated audio–lip pairs." data-zh="两个互补的数据资源：Real2mix 用于真实共同录制混讲的评测，VoxBlink2-AVSE 提供经过筛选的音频—唇部配对训练数据。">Explore two complementary resources: Real2mix for evaluating jointly recorded speech, and VoxBlink2-AVSE for training with curated audio–lip pairs.</p>
+        <a class="button" href="#datasets" data-en="Explore the datasets ↗" data-zh="了解数据集 ↗">Explore the datasets ↗</a>
+        <p class="quiet" data-en="Dataset overview · No model outputs · No external tracking" data-zh="数据集展示 · 不包含模型输出 · 无外部追踪">Dataset overview · No model outputs · No external tracking</p>
+      </div>
+      <div class="concept" role="img" aria-label="Schematic: one real mixture paired with two visual targets; no actual media or model outputs.">
+        <div class="concept-top"><span class="status-dot"></span><span data-en="ONE SHARED RECORDING" data-zh="同一次共同录制">ONE SHARED RECORDING</span><span class="mono">A + B</span></div>
+        <div class="wave" aria-hidden="true"></div>
+        <div class="fork" aria-hidden="true"></div>
+        <div class="target-row">
+          <div class="target"><span class="mouth" aria-hidden="true"></span><b data-en="Visual target A" data-zh="视觉目标 A">Visual target A</b><span data-en="Query the first speaker" data-zh="查询第一位说话人">Query the first speaker</span></div>
+          <div class="target second"><span class="mouth" aria-hidden="true"></span><b data-en="Visual target B" data-zh="视觉目标 B">Visual target B</b><span data-en="Query the second speaker" data-zh="查询第二位说话人">Query the second speaker</span></div>
+        </div>
+        <p class="concept-caption" data-en="Same audio. Different visual queries. Schematic only." data-zh="相同音频，不同视觉查询。此处为示意图。">Same audio. Different visual queries. Schematic only.</p>
+      </div>
+    </section>
+    <section id="datasets" class="container section">
+      <div class="section-heading"><p class="eyebrow" data-en="01 / TWO COMPLEMENTARY RESOURCES" data-zh="01 / 两个互补资源">01 / TWO COMPLEMENTARY RESOURCES</p><h2 data-en="Train on curated pairs. Evaluate on real overlap." data-zh="以筛选配对数据训练，以真实混讲检验。">Train on curated pairs. Evaluate on real overlap.</h2></div>
+      <div class="dataset-grid">
+        <article class="dataset-card real">
+          <span class="tag" data-en="REAL-SCENE BENCHMARK" data-zh="真实场景测试基准">REAL-SCENE BENCHMARK</span><h3>Real2mix</h3>
+          <p data-en="Read Mandarin speech from two people recorded together in a shared acoustic scene, with synchronized multi-view video and scene-matched solo references." data-zh="两位说话人在共同声学场景中录制的中文朗读混讲，配有多视角同步视频和同场景单人参考录音。">Read Mandarin speech from two people recorded together in a shared acoustic scene, with synchronized multi-view video and scene-matched solo references.</p>
+          <dl class="stats"><div><dt>6,038</dt><dd data-en="evaluable mixtures" data-zh="可评测混合音频">evaluable mixtures</dd></div><div><dt>12,076</dt><dd data-en="target queries" data-zh="目标查询">target queries</dd></div><div><dt>77</dt><dd data-en="recording scenes" data-zh="录制场景">recording scenes</dd></div><div><dt>28</dt><dd data-en="speakers / 14 fixed dyads" data-zh="说话人 / 14 个固定组合">speakers / 14 fixed dyads</dd></div></dl>
+          <div class="card-bottom"><span data-en="7,598 clips · 11.84 h" data-zh="7,598 个片段 · 11.84 小时">7,598 clips · 11.84 h</span><a href="#real-details" data-en="Recording details →" data-zh="采集详情 →">Recording details →</a></div>
+        </article>
+        <article class="dataset-card training">
+          <span class="tag" data-en="CURATED TRAINING CORPUS" data-zh="筛选后的训练语料">CURATED TRAINING CORPUS</span><h3>VoxBlink2-AVSE</h3>
+          <p data-en="A curated subset of VoxBlink2 containing synchronized audio and mouth-ROI pairs, stable identity keys, and speaker-disjoint training and development splits." data-zh="从 VoxBlink2 筛选的同步音频与唇部 ROI 配对语料，保留稳定的身份索引，并按说话人划分互不重叠的训练集与开发集。">A curated subset of VoxBlink2 containing synchronized audio and mouth-ROI pairs, stable identity keys, and speaker-disjoint training and development splits.</p>
+          <dl class="stats"><div><dt>250,828</dt><dd data-en="audio–lip pairs" data-zh="音频—唇部配对">audio–lip pairs</dd></div><div><dt>766.17 h</dt><dd data-en="retained audio" data-zh="保留音频时长">retained audio</dd></div><div><dt>28,421</dt><dd data-en="identities" data-zh="身份数量">identities</dd></div><div><dt>≥ 3.3</dt><dd data-en="predicted DNSMOS OVRL filter" data-zh="预测 DNSMOS OVRL 筛选阈值">predicted DNSMOS OVRL filter</dd></div></dl>
+          <div class="card-bottom"><span data-en="16 kHz mono · 96 × 96 mouth ROIs" data-zh="16 kHz 单声道 · 96 × 96 唇部 ROI">16 kHz mono · 96 × 96 mouth ROIs</span><a href="#training-details" data-en="Curation & splits →" data-zh="筛选与划分 →">Curation & splits →</a></div>
+        </article>
+      </div>
+    </section>
+    <section id="protocol" class="protocol-section section">
+      <div class="container">
+        <p class="eyebrow" data-en="02 / REAL2MIX RECORDING PROTOCOL" data-zh="02 / REAL2MIX 采集协议">02 / REAL2MIX RECORDING PROTOCOL</p>
+        <div class="section-heading"><h2 data-en="Three stages. One shared scene." data-zh="三个录制阶段，同一个场景。">Three stages. One shared scene.</h2><p data-en="Solo recordings provide identity references. Jointly recorded overlap provides the evaluation mixture." data-zh="单人阶段提供身份参考，共同说话阶段提供用于评测的真实混合音频。">Solo recordings provide identity references. Jointly recorded overlap provides the evaluation mixture.</p></div>
+        <div class="stages"><article><span class="step">01</span><h3 data-en="Speaker A only" data-zh="仅说话人 A">Speaker A only</h3><p data-en="Scene-matched reference speech for target A." data-zh="与测试场景匹配的目标 A 参考录音。">Scene-matched reference speech for target A.</p></article><article><span class="step">02</span><h3 data-en="Speaker B only" data-zh="仅说话人 B">Speaker B only</h3><p data-en="Scene-matched reference speech for target B." data-zh="与测试场景匹配的目标 B 参考录音。">Scene-matched reference speech for target B.</p></article><article><span class="step">03</span><h3 data-en="A + B together" data-zh="A 与 B 同时说话">A + B together</h3><p data-en="Both speakers share the room, reverberation, and background sound." data-zh="两位说话人共享房间、混响及背景声音。">Both speakers share the room, reverberation, and background sound.</p></article></div>
+        <div id="real-details" class="detail-grid">
+          <article><h3 data-en="Geometry & views" data-zh="采集几何与视角">Geometry & views</h3><ul><li data-en="Recording distances: 0.5, 1.5, and 3 m." data-zh="录制距离：0.5、1.5 和 3 m。">Recording distances: 0.5, 1.5, and 3 m.</li><li data-en="Side-camera placement angles: 30°, 45°, and 60°." data-zh="侧摄像机布置角度：30°、45° 和 60°。">Side-camera placement angles: 30°, 45°, and 60°.</li><li data-en="Three synchronized views capture the same two-speaker event." data-zh="三个同步视角记录同一次双人说话事件。">Three synchronized views capture the same two-speaker event.</li><li data-en="Benchmark evaluation uses predominantly frontal views." data-zh="基准评测主要使用正面视角。">Benchmark evaluation uses predominantly frontal views.</li></ul><p class="small" data-en="Camera placement angles are not measured acoustic target directions." data-zh="摄像机布置角度不等于实测的目标声源方位角。">Camera placement angles are not measured acoustic target directions.</p></article>
+          <article><h3 data-en="From recordings to queries" data-zh="从录制片段到目标查询">From recordings to queries</h3><p data-en="Full recordings are manually segmented, aiming to preserve complete utterances. Clips retain a consistent mapping between the two visual tracks and speaker labels." data-zh="完整录制后进行人工切分，尽量保留完整 utterance，并维持两条视觉轨迹与说话人标签的一致映射。">Full recordings are manually segmented, aiming to preserve complete utterances. Clips retain a consistent mapping between the two visual tracks and speaker labels.</p><p class="equation">6,038 <span data-en="mixtures" data-zh="混合音频">mixtures</span> × 2 <span data-en="targets" data-zh="目标">targets</span> = 12,076 <span data-en="queries" data-zh="查询">queries</span></p><p class="small" data-en="The collection contains 1,556 solo and 6,042 overlap clips; four overlap clips lack a complete ROI pair, leaving 6,038 eligible mixtures. Solo references are different utterances, not synchronized clean sources." data-zh="完整采集包括 1,556 个单人片段和 6,042 个混讲片段；其中 4 个混讲片段缺少完整 ROI 对，最终有 6,038 条可评测混合音频。单人参考是不同时间的其他句子，并非同步干净源。">The collection contains 1,556 solo and 6,042 overlap clips; four overlap clips lack a complete ROI pair, leaving 6,038 eligible mixtures. Solo references are different utterances, not synchronized clean sources.</p></article>
+        </div>
+      </div>
+    </section>
+    <section id="training-details" class="container section">
+      <p class="eyebrow" data-en="03 / VOXBLINK2-AVSE CURATION" data-zh="03 / VOXBLINK2-AVSE 筛选">03 / VOXBLINK2-AVSE CURATION</p>
+      <div class="section-heading"><h2 data-en="Aligned pairs, separated identities." data-zh="音唇配对，说话人独立划分。">Aligned pairs, separated identities.</h2><p data-en="Validate decodable audio and synchronized mouth tracks, then retain pairs meeting the predicted speech-quality threshold. Rejected pairs are discarded rather than enhanced." data-zh="先检查音频可解码性与唇部轨迹同步性，再保留满足预测语音质量阈值的配对。不合格数据直接丢弃，不做增强后回填。">Validate decodable audio and synchronized mouth tracks, then retain pairs meeting the predicted speech-quality threshold. Rejected pairs are discarded rather than enhanced.</p></div>
+      <div class="table-wrap"><table><caption data-en="Speaker-disjoint partitions of VoxBlink2-AVSE" data-zh="VoxBlink2-AVSE 说话人不重叠的数据划分">Speaker-disjoint partitions of VoxBlink2-AVSE</caption><thead><tr><th data-en="Partition" data-zh="划分">Partition</th><th data-en="Pairs" data-zh="配对数">Pairs</th><th data-en="Identities" data-zh="身份数">Identities</th><th data-en="Audio hours" data-zh="音频小时数">Audio hours</th></tr></thead><tbody><tr><th data-en="Training" data-zh="训练集">Training</th><td>239,680</td><td>26,927</td><td>732.54</td></tr><tr><th data-en="Development" data-zh="开发集">Development</th><td>11,148</td><td>1,494</td><td>33.63</td></tr><tr class="total"><th data-en="Total" data-zh="合计">Total</th><td>250,828</td><td>28,421</td><td>766.17</td></tr></tbody></table></div>
+      <p class="small" data-en="No speaker-ID overlap between training and development. The mean retained duration is 10.99 s. Predicted quality filtering does not make the recordings noise-free." data-zh="训练集和开发集之间没有 speaker-ID 交集；保留片段的平均时长为 10.99 秒。通过预测质量筛选不意味着录音完全无噪。">No speaker-ID overlap between training and development. The mean retained duration is 10.99 s. Predicted quality filtering does not make the recordings noise-free.</p>
+    </section>
+    <section id="formats" class="container section">
+      <p class="eyebrow" data-en="04 / FORMAT PREVIEW" data-zh="04 / 数据格式预览">04 / FORMAT PREVIEW</p>
+      <div class="format-grid"><div><h2 data-en="One key connects the modalities." data-zh="一个索引，连接不同模态。">One key connects the modalities.</h2><p data-en="Real2mix packages a mixture with two speaker-aligned mouth tracks and target transcripts. VoxBlink2-AVSE links each training waveform to a mouth track and an identity key." data-zh="Real2mix 将混合音频、两条按说话人对齐的唇部轨迹和目标文本关联。VoxBlink2-AVSE 将每条训练音频与唇部轨迹、身份索引关联。">Real2mix packages a mixture with two speaker-aligned mouth tracks and target transcripts. VoxBlink2-AVSE links each training waveform to a mouth track and an identity key.</p><dl class="specs"><div><dt data-en="Audio" data-zh="音频">Audio</dt><dd>WAV · 16 kHz · mono</dd></div><div><dt data-en="Mouth ROI" data-zh="唇部 ROI">Mouth ROI</dt><dd>NPZ · grayscale · T × 96 × 96</dd></div><div><dt data-en="Metadata" data-zh="元数据">Metadata</dt><dd>JSONL · clip / identity / target keys</dd></div></dl><p class="small" data-en="Illustrative layout only. No personal media or complete dataset files are hosted on this site." data-zh="右侧仅为结构示意。本网站不托管可识别个人的媒体或完整数据集文件。">Illustrative layout only. No personal media or complete dataset files are hosted on this site.</p></div>
+      <div class="code-card"><div class="code-label" data-en="REAL2MIX · ILLUSTRATIVE RECORD" data-zh="REAL2MIX · 记录结构示意">REAL2MIX · ILLUSTRATIVE RECORD</div><pre><code>clip_id/
+├── clip.wav          shared mixture
+├── clip.avi          synchronized video
+├── clip.s1.npz       target 1 mouth ROI
+└── clip.s2.npz       target 2 mouth ROI
+
+metadata.jsonl
+{
+  "id": "clip_id",
+  "sample_rate": 16000,
+  "channels": 1,
+  "stage": "overlap",
+  "text_s1": "target 1 transcript",
+  "text_s2": "target 2 transcript",
+  "evaluation_eligible": true
+}</code></pre><p data-en="The packaged release uses tar shards and metadata manifests; this view groups the related members for readability." data-zh="打包格式使用 tar 分片与元数据清单；这里将关联成员归在一起，便于阅读。">The packaged release uses tar shards and metadata manifests; this view groups the related members for readability.</p></div></div>
+    </section>
+    <section id="access" class="container section">
+      <div class="access-card"><div><p class="eyebrow" data-en="DATA ACCESS" data-zh="数据访问">DATA ACCESS</p><h2 data-en="Explore the resource. Downloads will follow." data-zh="先了解数据，下载入口后续开放。">Explore the resource. Downloads will follow.</h2><p data-en="This page describes the datasets and their organization. Download links are not enabled in this version. Release conditions and redistribution permissions will accompany dataset access." data-zh="当前页面用于介绍数据集及其组织方式，本版暂不启用下载链接。开放访问时会同时提供发布条件与再分发权限说明。">This page describes the datasets and their organization. Download links are not enabled in this version. Release conditions and redistribution permissions will accompany dataset access.</p></div><span class="access-status" data-en="INFORMATION ONLY" data-zh="当前仅提供展示">INFORMATION ONLY</span></div>
+    </section>
+  </main>
+  <footer class="container footer"><span>Real2mix &amp; VoxBlink2-AVSE</span><span data-en="Dataset overview · No author identifiers in page content" data-zh="数据集展示 · 页面内容不包含作者标识">Dataset overview · No author identifiers in page content</span><a href="#" data-en="Back to top ↑" data-zh="返回顶部 ↑">Back to top ↑</a></footer>
+</body>
+</html>
