@@ -9,7 +9,7 @@ Open [the dataset page](index.html) for an overview of recording protocols, corp
 | Real2mix | Real-scene evaluation | 6,038 eligible mixtures; 12,076 target queries; 28 speakers |
 | VoxBlink2-AVSE | Curated training and development | 250,828 audio–lip pairs; 28,421 identities; 766.17 hours |
 
-This repository contains only a lightweight static introduction. It includes no model outputs, participant audio/video, weights, or complete dataset files. Download links are not enabled. Licensing and redistribution conditions will accompany data access.
+This repository contains only a lightweight static introduction. It includes no model outputs, participant audio/video, weights, or complete dataset files. Download links are not enabled. Real2mix is released under CC BY-NC 4.0. All recruited participants signed consent forms covering data collection and public release. VoxBlink2-AVSE file lists, split manifests, and curation instructions are released under CC BY-NC 4.0; upstream media are not redistributed or relicensed. Users obtain authorized VoxBlink2 access and extract the listed items themselves.
 
 The site uses relative asset paths, local styles and scripts, and no external fonts, analytics, or API requests. All main content is readable without JavaScript; JavaScript adds language switching and a decorative schematic.
 
